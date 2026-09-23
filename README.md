@@ -191,5 +191,5 @@ This package bundles or uses third-party software:
 - **scrcpy**: Developed by [Genymobile](https://github.com/Genymobile/scrcpy) and contributors, licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). 
   - The original copyright and license files for `scrcpy` are preserved and included alongside its binaries in this release.
 
-###**BIG DISCLAMER**
+##**BIG DISCLAMER**
   **ONLY TESTED ON SAMSUNG PHONES**
