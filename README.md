@@ -1,8 +1,8 @@
-# ScrcDex
+# ScrDex
 
 Turn your Android device into a desktop-like experience using Taskbar and scrcpy.
 
-ScrcDex is a Bash-based automation tool designed to configure an Android device for a desktop-style experience and control it from a Windows PC.
+ScrDex is a Bash-based automation tool designed to configure an Android device for a desktop-style experience and control it from a Windows PC.
 
 It combines Android ADB commands, Taskbar, and scrcpy to configure the device, enable desktop-oriented Android features, and start a high-quality screen mirroring session.
 
@@ -24,13 +24,13 @@ It combines Android ADB commands, Taskbar, and scrcpy to configure the device, e
 
 ---
 
-## How ScrcDex Works
+## How ScrDex Works
 
-ScrcDex acts as an automation layer between the Android device and the desktop software used to control it.
+ScrDex acts as an automation layer between the Android device and the desktop software used to control it.
 ```
 
                  ┌──────────────┐
-                 │   ScrcDex    │
+                 │   ScrDex    │
                  │ automation   │
                  └──────┬───────┘
                         │
@@ -67,22 +67,22 @@ ScrcDex acts as an automation layer between the Android device and the desktop s
 ## Dependencies & Credits
 
 ### scrcpy
-ScrcDex uses scrcpy, developed and maintained by Genymobile and its contributors.
+ScrDex uses scrcpy, developed and maintained by Genymobile and its contributors.
 
 scrcpy is free and open-source software that mirrors and controls Android devices from a computer.
 
 - **Official Repository:** [https://github.com/Genymobile/scrcpy](https://github.com/Genymobile/scrcpy)
 
-The official scrcpy project is the only official source for scrcpy releases. ScrcDex may distribute an official Linux scrcpy release together with its own release package.
+The official scrcpy project is the only official source for scrcpy releases. ScrDex may distribute an official Linux scrcpy release together with its own release package.
 
-> **Note:** ScrcDex does not claim ownership of scrcpy or its source code. scrcpy is licensed under the Apache License, Version 2.0. For the complete scrcpy license and copyright information, see the files included with the corresponding scrcpy release.
+> **Note:** ScrDex does not claim ownership of scrcpy or its source code. scrcpy is licensed under the Apache License, Version 2.0. For the complete scrcpy license and copyright information, see the files included with the corresponding scrcpy release.
 
 ### ADB
-ScrcDex uses Android Debug Bridge (ADB) to communicate with the Android device.
+ScrDex uses Android Debug Bridge (ADB) to communicate with the Android device.
 
 The Linux release of scrcpy includes the required ADB components, so a separate ADB installation is not required when using the bundled scrcpy release.
 
-ADB is used by ScrcDex for operations such as:
+ADB is used by ScrDex for operations such as:
 - Detecting the Android device
 - Reading device information
 - Installing and configuring Taskbar
@@ -93,22 +93,22 @@ ADB is used by ScrcDex for operations such as:
 - Restoring the original configuration
 
 ### Taskbar
-ScrcDex uses Taskbar by Braden Farmer and contributors.
+ScrDex uses Taskbar by Braden Farmer and contributors.
 
-Taskbar provides the desktop-style Android interface used by ScrcDex.
+Taskbar provides the desktop-style Android interface used by ScrDex.
 
 - **Official Repository:** [https://github.com/farmerbb/Taskbar](https://github.com/farmerbb/Taskbar)
 
-ScrcDex does not include the Taskbar source code. Taskbar will automaticaly be installed separately on the Android device.
+ScrDex does not include the Taskbar source code. Taskbar will automaticaly be installed separately on the Android device.
 
 ---
 
 ## Installation
 
-### 1. Download ScrcDex
-Download the latest ScrcDex release from the GitHub Releases page.
+### 1. Download ScrDex
+Download the latest ScrDex release from the GitHub Releases page.
 
-If the release includes scrcpy, extract the complete ScrcDex package to a folder on your Linux PC. **Do not remove the files included with the scrcpy release.**
+If the release includes scrcpy, extract the complete ScrDex package to a folder on your Linux PC. **Do not remove the files included with the scrcpy release.**
 
 
 ### 2. Enable USB Debugging
@@ -123,16 +123,16 @@ On the Android device:
 8. Connect the Android device to the PC
 9. Accept the *"Allow USB debugging?"* RSA prompt on your device
 
-### 3. Start ScrcDex
-Run the ScrcDex script from the ScrcDex directory.
+### 3. Start ScrDex
+Run the ScrDex script from the ScrDex directory.
 
-ScrcDex will check the ADB connection and guide you through the required Taskbar configuration.
+ScrDex will check the ADB connection and guide you through the required Taskbar configuration.
 
 ---
 
 ## Android Configuration
 
-During execution, ScrcDex may temporarily modify Android system settings. These can include:
+During execution, ScrDex may temporarily modify Android system settings. These can include:
 - Display size
 - Display density
 - Font scale
@@ -143,10 +143,10 @@ During execution, ScrcDex may temporarily modify Android system settings. These 
 - External display support
 - Default home application
 
-Before changing these settings, ScrcDex stores the original values whenever possible. When the scrcpy session ends, ScrcDex attempts to restore the original configuration. **PLEASE DO NOT UNPLUG THE CABLE. CLOSE SCRCDEX FIRST, THEN WAIT 1 SECOND TO RESTORE YOUR SETTINGS.**
+Before changing these settings, ScrDex stores the original values whenever possible. When the scrcpy session ends, ScrDex attempts to restore the original configuration. **PLEASE DO NOT UNPLUG THE CABLE. CLOSE SCRDEX FIRST, THEN WAIT 1 SECOND TO RESTORE YOUR SETTINGS.**
 
 ### Display Configuration
-ScrcDex configures the Android display for the desktop-style environment.
+ScrDex configures the Android display for the desktop-style environment.
 
 The temporary configuration used by the current release is:
 - **Resolution:** 2160x3840
@@ -156,7 +156,7 @@ The temporary configuration used by the current release is:
 The original display configuration is saved before these changes are applied and restored after the session.
 
 ### Keyboard / IME Handling
-ScrcDex temporarily manages Android input methods while the desktop environment is active.
+ScrDex temporarily manages Android input methods while the desktop environment is active.
 
 The script:
 - Detects enabled input methods
@@ -166,13 +166,13 @@ The script:
 - Disables Google TTS when required
 - Restores the original keyboard configuration when the session ends
 
-The original enabled input method configuration is preserved so that ScrcDex can attempt to return the device to its previous state.
+The original enabled input method configuration is preserved so that ScrDex can attempt to return the device to its previous state.
 
 ---
 
 ## scrcpy Configuration
 
-The current ScrcDex session starts scrcpy using:
+The current ScrDex session starts scrcpy using:
 
 ```bash
 ./scrcpy \
@@ -183,7 +183,7 @@ The current ScrcDex session starts scrcpy using:
 ```
 ## License
 
-ScrcDex is licensed under the [MIT License](LICENSE).
+ScrDex is licensed under the [MIT License](LICENSE).
 
 ### Third-Party Software
 This package bundles or uses third-party software:
